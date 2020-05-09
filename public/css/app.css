@@ -10882,3 +10882,133 @@ a.text-dark:focus {
   }
 }
 
+body {
+  padding-left: 100px;
+  padding-right: 100px;
+  background-color: #000;
+  font: Normal 14px/24px "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.logo {
+  max-width: 50px;
+}
+
+header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.links-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.link {
+  padding: 10px;
+}
+
+.link a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+  font-size: 12pt;
+  transition: all 0.3s ease-in-out;
+}
+
+.link a:hover {
+  color: #eb6825;
+  transition: all 0.3s ease-in-out;
+}
+
+.intro img {
+  z-index: -10;
+  position: absolute;
+  width: 100%;
+  margin-left: -100px;
+}
+
+.intro-text {
+  font-size: 40px;
+  text-transform: uppercase;
+  line-height: 60px;
+  text-align: center;
+  display: block;
+  margin-bottom: 30px;
+  letter-spacing: 6px;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  top: 200px;
+}
+
+.main {
+  min-height: calc(100vh - 70px);
+  margin-bottom: calc(100vh - 70px);
+}
+
+footer {
+  height: 300px;
+  font-weight: 600;
+  background-color: #515151 !important;
+  font-size: 8pt;
+  width: 100wv;
+  margin-left: -100px;
+  margin-right: -100px;
+}
+
+.footer-columns-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.footer-column-container {
+  width: 30%;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-column-container h3 {
+  color: #fff;
+}
+
+.footer-column-container a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #999999;
+}
+
+.footer-column-container p {
+  text-decoration: none;
+  font-weight: 600;
+  color: #999999;
+}
+
+.footer-column-container img {
+  width: 150px;
+}
+
+.rigts-class-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.right-class {
+  text-decoration: none;
+  font-weight: 600;
+  color: #999999;
+}
+
