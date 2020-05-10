@@ -22,21 +22,36 @@ export default class PizzaComponent extends Component{
 
     render(){
         return(
-            <div className="pizza-container">
-                <div className = "card-body">
-                    {this.state.pizza.map(
-                        data =><div className="pizza-object">
-                             <p>{data[1]}</p>
-                             <p>{data[2]}</p>
-                             <p>{data[3]}</p>
-                             <p>{data[4]}</p>
-                             <p>{data[5]}</p>
-                             <p>{data[6]}</p>
-                             <p>{data[7]}</p>
-                        </div>
-                    )}
+
+            <div className = "card-body">
+                <div className = "intro-text menu-title-text">
+                    <p>our delicious menu</p>
                 </div>
+                {this.state.pizza.map(
+                    data =><div className="pizza-object" key={data[1]}>
+                            <div className="pizza-row">
+                                <p className="pizza-name">{data[1]}</p>
+                                <div className="pizza-sizes-container">
+                                    <div className="pizza-sizes">
+                                        <p>{data[2]}</p>
+                                        <p>{data[3]}</p>
+                                        <p>{data[4]}</p>
+                                    </div>
+                                    <div className="pizza-prices">
+                                        <p>{data[5]}</p>
+                                        <p>{data[6]}</p>
+                                        <p>{data[7]}</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="pizza-ingredients-container">
+                                <p>Ingredients: {data[8]}</p>
+                            </div>
+                    </div>
+                )}
             </div>
+
         );
     }
 

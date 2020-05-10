@@ -10890,6 +10890,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  overflow-x: hidden;
 }
 
 .logo {
@@ -10930,6 +10931,11 @@ header {
   transition: all 0.3s ease-in-out;
 }
 
+#intro-container {
+  height: 600px;
+  min-height: 600px;
+}
+
 .intro img {
   z-index: -10;
   position: absolute;
@@ -10953,7 +10959,6 @@ header {
 
 .main {
   min-height: calc(100vh - 70px);
-  margin-bottom: calc(100vh - 70px);
 }
 
 footer {
@@ -10964,6 +10969,7 @@ footer {
   width: 100wv;
   margin-left: -100px;
   margin-right: -100px;
+  margin-top: 150px;
 }
 
 .footer-columns-container {
@@ -11010,5 +11016,138 @@ footer {
   text-decoration: none;
   font-weight: 600;
   color: #999999;
+}
+
+.menu-title-text {
+  top: 0;
+}
+
+#menu-container {
+  margin-top: 150px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pizza-object {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50%;
+  border: 1px solid #eb6825;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+
+.pizza-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pizza-object p {
+  color: #fff;
+  font-size: 14pt;
+}
+
+.pizza-sizes-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.pizza-sizes-container p {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.pizza-sizes {
+  display: flex;
+  flex-direction: row;
+}
+
+.pizza-prices {
+  display: flex;
+  flex-direction: row;
+}
+
+.pizza-ingredients-container p {
+  font-size: 9pt;
+  font-style: italic;
+}
+
+.logout-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #515151;
+  font-size: 12pt;
+  padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 100vw;
+  min-width: 100%;
+  margin-left: -100px;
+  margin-right: -100px;
+}
+
+.header-text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.logout-container p {
+  margin: 0;
+  color: #fff;
+}
+
+.header-text-container a {
+  margin: 0;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid aliceblue;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.app-dashboard-container {
+  height: 650px;
+}
+
+.add-pizza-title-container {
+  top: 40px;
+}
+
+.add-pizza {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-pizza-form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin-top: 50px;
+}
+
+.add-pizza-form input {
+  float: right;
+}
+
+.add-pizza-form label {
+  color: #fff;
+}
+
+.add-instructions-container {
+  margin-top: 50px;
+  border: 3px solid #515151;
+}
+
+.add-instructions-container p {
+  color: #fff;
 }
 

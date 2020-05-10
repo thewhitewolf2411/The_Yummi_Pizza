@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PageController@ShowLandingPage');
+Route::get('/', 'PageController@showLandingPage');
 
 Route::get('/data', 'PageController@GetData');
+
+//User dashboard route
+Auth::routes(['register' => false, 'reset' => false]);
+Route::get('/dashboard', 'PageController@showDashboardPage')->middleware('auth');
+
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+//add pizza route
+Route::post('/addpizza', 'PageController@PostData');

@@ -14,6 +14,6 @@ class Ingredient extends Model
     protected $table = 'ingridient';
 
     protected $fillable = [
-        'ingridient_one', 'ingridient_two', 'ingridient_three', 'ingridient_four', 'ingridient_five', 'ingridient_six', 'ingridient_seven','ingridient_eight', 'ingridient_nine', 'ingridient_ten'
+        'pizza_id','ingridient_name'
     ];
 }
