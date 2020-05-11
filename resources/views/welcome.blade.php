@@ -13,7 +13,7 @@
         <link rel = "icon" href = "/images/Logo.png" type = "image/x-icon"> 
 
         <!-- Compiled Stylesheet -->
-        <link rel="stylesheet" href="/css/app.css'">
+        <link rel="stylesheet" href="/css/app.css">
 
     </head>
     <body>
