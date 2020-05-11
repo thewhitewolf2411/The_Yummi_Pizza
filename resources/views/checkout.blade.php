@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        
+
         <title>Checkout</title>
 
         <!-- Fonts -->
@@ -14,7 +14,7 @@
         <link rel = "icon" href = "/images/Logo.png" type = "image/x-icon"> 
 
         <!-- Compiled Stylesheet -->
-        <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
 
     </head>
     <body>
