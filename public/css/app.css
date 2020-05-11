@@ -11068,11 +11068,13 @@ footer {
 .pizza-sizes {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 
 .pizza-prices {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 
 .pizza-ingredients-container p {
@@ -11149,5 +11151,71 @@ footer {
 
 .add-instructions-container p {
   color: #fff;
+}
+
+.cart-container a {
+  text-decoration: none;
+  font-size: 14pt;
+}
+
+.add-container button {
+  margin: 10px;
+  border: none;
+}
+
+.checkout-container p {
+  color: #ffffff;
+}
+
+.checkout-container label {
+  color: #ffffff;
+}
+
+.checkout-text-container p {
+  color: #ffffff;
+}
+
+.checkout-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkout-text-container a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.all-items-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.items-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.item-container {
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  margin: 15px;
+  padding: 15px;
+  width: 300px;
+}
+
+.total-cart-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.total-cart-container div {
+  margin: 15px;
+}
+
+.total-cart-container button {
+  border: none;
 }
 

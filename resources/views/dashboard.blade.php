@@ -17,7 +17,7 @@
 
     </head>
     <body class="body-class">
-
+        @if(Auth::user()->is_admin)
         <div class="app-dashboard-container">
         
             <div class="header-container logout-container">
@@ -35,7 +35,9 @@
             </div>
 
         </div>
-        
+        @else
+            karina
+        @endif
     </body>
     <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
 </html>

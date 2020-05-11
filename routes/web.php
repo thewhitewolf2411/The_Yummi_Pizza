@@ -13,9 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PageController@showLandingPage');
+Route::get('/', 'PageController@showLandingPage')->name('index');
 
 Route::get('/data', 'PageController@GetData');
+
+//Session route
+Route::post('/add-to-cart', 'CartController@addToCart');
+//Session clear
+Route::post('/remove-cart', 'CartController@removeCart');
+
+//checkout route
+Route::get('/checkout', 'PageController@showCheckout');
 
 //User dashboard route
 Auth::routes(['register' => false, 'reset' => false]);

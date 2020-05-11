@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Product;
 use App\Ingredient;
+use App\Cart;
 use DB;
+use Session;
 
 class PageController extends Controller
 {
@@ -90,5 +92,13 @@ class PageController extends Controller
         }
 
         return true;
+    }
+
+    public function showCheckout(){
+      
+        $oldCart = Session::get('cart');
+
+        $cart = new Cart($oldCart);
+        return view('checkout', ['cart'=>$cart]);
     }
 }

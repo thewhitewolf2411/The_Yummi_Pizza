@@ -201,11 +201,13 @@ footer{
 .pizza-sizes{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }
 
 .pizza-prices{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }
 
 .pizza-ingredients-container p{

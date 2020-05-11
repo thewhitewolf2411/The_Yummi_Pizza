@@ -8,8 +8,10 @@ export default class PizzaComponent extends Component{
         //console.log('here');
 
         this.state = {
-            pizza: []
+            pizza: [],
         }
+
+        this.addFunc = this.addFunc.bind(this);
     }
 
     componentDidMount(){
@@ -19,13 +21,23 @@ export default class PizzaComponent extends Component{
             console.log(error);
         })
     }
-
+    
+    addFunc(id, price, size){
+        axios.post('/add-to-cart', {id,price, size})
+        .then(res=>{
+            console.log(res);
+        })
+    }
+    
     render(){
         return(
 
             <div className = "card-body">
                 <div className = "intro-text menu-title-text">
                     <p>our delicious menu</p>
+                </div>
+                <div className="cart-container">
+                    <a href='/checkout' target="_blank">Your cart <img src="/images/commerce.svg"></img></a>
                 </div>
                 {this.state.pizza.map(
                     data =><div className="pizza-object" key={data[1]}>
@@ -41,6 +53,11 @@ export default class PizzaComponent extends Component{
                                         <p>{data[5]}</p>
                                         <p>{data[6]}</p>
                                         <p>{data[7]}</p>
+                                    </div>
+                                    <div className="add-container">
+                                        <button onClick={() =>this.addFunc(data[0], data[5], data[2])}>Add to cart</button>
+                                        <button onClick={() =>this.addFunc(data[0], data[6], data[3])}>Add to cart</button>
+                                        <button onClick={() =>this.addFunc(data[0], data[7], data[4])}>Add to cart</button>
                                     </div>
                                 </div>
                             </div>
