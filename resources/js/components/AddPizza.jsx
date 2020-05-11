@@ -42,6 +42,7 @@ export default class AddPizza extends Component{
             .then(res=>{
                 console.log(res);
             })
+            .catch((error) => console.log(error));
     }
 
     render(){
