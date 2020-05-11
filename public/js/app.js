@@ -65997,16 +65997,14 @@ var AddPizza = /*#__PURE__*/function (_Component) {
         pizzajumboprice: this.state.pizzajumboprice,
         pizzaingridients: this.state.pizzaingridients
       };
-      var axiosConfig = {
-        headers: {
-          '//Content-Type': 'application/x-www-form-urlencoded',
-          "Access-Control-Allow-Origin": "",
-          'Accept': ''
-        }
-      };
       axios__WEBPACK_IMPORTED_MODULE_2___default.a.post('/addpizza', {
         newPizza: newPizza
-      }, axiosConfig).then(function (res) {
+      }, {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods ': 'POST, GET, OPTIONS, PUT, DELETE',
+        'Access-Control-Allow-Headers': 'Content-Type, X-Auth-Token, Origin, Authorization',
+        'X-Requested-With': 'XMLHttpRequest'
+      }).then(function (res) {
         console.log(res);
       });
     }

@@ -35,8 +35,6 @@
             </div>
 
         </div>
-        @else
-            karina
         @endif
     </body>
     <script type="text/javascript" src="js/app.js"></script>
