@@ -8,6 +8,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
         <!-- Favicon -->
         <link rel = "icon" href = "/images/Logo.png" type = "image/x-icon"> 
