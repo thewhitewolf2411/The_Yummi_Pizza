@@ -14,7 +14,7 @@
         <link rel = "icon" href = "/images/Logo.png" type = "image/x-icon"> 
 
         <!-- Compiled Stylesheet -->
-        <link rel="stylesheet" href="/css/app.css">
+        <link rel="stylesheet" href="{{ secure_asset('/css/app.css') }}">
 
     </head>
     <body>
@@ -78,5 +78,5 @@
         </div>   
         
     </body>
-    <script type="text/javascript" src="/js/app.js"></script>
+    <script type="text/javascript" src="{{ secure_asset('js/app.js') }}"></script>
 </html>
