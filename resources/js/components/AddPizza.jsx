@@ -33,9 +33,8 @@ export default class AddPizza extends Component{
 
         var axiosConfig = {
             headers: {
-                'Content-Type': 'application/json;charset=UTF-8',
-                "Access-Control-Allow-Origin": true,
-                "Access-Control-Allow-Credentials": true,
+                'Content-Type': 'application/x-www-form-urlencoded',
+                "Access-Control-Allow-Origin": "",
             }
         };
 
