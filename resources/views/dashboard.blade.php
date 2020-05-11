@@ -13,7 +13,7 @@
         <link rel = "icon" href = "/images/Logo.png" type = "image/x-icon"> 
 
         <!-- Compiled Stylesheet -->
-        <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
+        <link rel="stylesheet" href="/css/app.css">
 
     </head>
     <body class="body-class">
@@ -39,5 +39,5 @@
             karina
         @endif
     </body>
-    <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 </html>
