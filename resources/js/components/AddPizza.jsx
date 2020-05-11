@@ -31,7 +31,7 @@ export default class AddPizza extends Component{
             pizzaingridients: this.state.pizzaingridients
         };
 
-        axios.post('/addpizza', {newPizza})
+        axios.post('/addpizza', {newPizza}, {'Access-Control-Allow-Origin': '*' , 'Access-Control-Allow-Methods ':  'POST, GET, OPTIONS, PUT, DELETE','Access-Control-Allow-Headers':  'Content-Type, X-Auth-Token, Origin, Authorization','X-Requested-With': 'XMLHttpRequest'})
             .then(res=>{
                 console.log(res);
             })
