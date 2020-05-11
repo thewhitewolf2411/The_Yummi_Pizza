@@ -31,18 +31,10 @@ export default class AddPizza extends Component{
             pizzaingridients: this.state.pizzaingridients
         };
 
-        var axiosConfig = {
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-                "Access-Control-Allow-Origin": "",
-            }
-        };
-
-        axios.post('/addpizza', {newPizza}, axiosConfig)
+        axios.post('/addpizza', {newPizza})
             .then(res=>{
                 console.log(res);
             })
-            .catch((error) => console.log(error));
     }
 
     render(){
