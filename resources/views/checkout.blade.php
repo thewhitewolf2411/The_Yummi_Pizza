@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        <!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->
 
         <title>Checkout</title>
 
@@ -52,7 +52,7 @@
 
 
             <div class="submit-container">
-                <form action="">
+                <form action="{{ action('PageController@finishCheckout') }}" method="post">
                 @csrf
                 <label>Pleaase enter your address:
                     <input type="text" name="address">

@@ -15,12 +15,13 @@ class CartController extends Controller
 
         $product = Product::find($request->id);
 
+
         $oldCart = Session::has('cart') ? Session::get('cart') : null;
 
         $cart = new Cart($oldCart);
 
 
-        $cart->add($product->product_name, $request->price, $request->size);
+        $cart->add($product->product_name, $request->price, $request->size, $product->id);
         $request->session()->put('cart', $cart);
         
         return redirect('/');

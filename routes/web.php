@@ -32,3 +32,5 @@ Route::get('/dashboard', 'PageController@showDashboardPage')->middleware('auth')
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 //add pizza route
 Route::post('/addpizza', 'PageController@PostData');
+
+Route::post('/finishorder', 'PageController@finishCheckout');

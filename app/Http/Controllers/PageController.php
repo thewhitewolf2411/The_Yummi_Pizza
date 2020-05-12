@@ -19,7 +19,29 @@ class PageController extends Controller
     }
 
     public function showDashboardPage(){
-        return view('dashboard');
+
+        $allProducts = Product::all();
+        $boughtData = DB::table('statistics')->get();
+
+        $counter = 0;
+        $returnObject = [];
+        $pizzas = [];
+
+        foreach($allProducts as $item){
+
+            $temp = ["id" => $item->id, "product_name"=>$item->product_name, "count" => 0];
+
+            foreach($boughtData as $boughtObject){
+                if($boughtObject->product_id == $item->id){
+                    $temp["count"]++;
+                }
+            }
+
+            array_push($pizzas, $temp);
+        }
+
+
+        return view('dashboard', ['pizzas' => $pizzas]);
     }
 
     public function GetData(){
@@ -100,5 +122,21 @@ class PageController extends Controller
 
         $cart = new Cart($oldCart);
         return view('checkout', ['cart'=>$cart]);
+    }
+
+    public function finishCheckout(){
+
+        $data = Session::get('cart');
+
+
+        foreach($data->items as $orderedObject){
+
+            DB::table('statistics')->insert(['product_id' => $orderedObject['id']]);
+        }
+
+        Session::forget('cart');
+
+        
+        return \redirect('/');
     }
 }

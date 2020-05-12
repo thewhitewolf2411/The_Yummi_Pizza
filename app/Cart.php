@@ -17,9 +17,9 @@ class Cart
        }
    }
 
-   public function add($item, $price, $size){
+   public function add($item, $price, $size, $id){
 
-       $storedItem = ['price'=>$price, 'item'=>$item, 'size'=>$size];
+       $storedItem = ['price'=>$price, 'item'=>$item, 'size'=>$size, 'id'=>$id];
 
        $storedItem['price'] = $price;
 

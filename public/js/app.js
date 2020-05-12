@@ -66005,7 +66005,10 @@ var AddPizza = /*#__PURE__*/function (_Component) {
         'Access-Control-Allow-Headers': 'Content-Type, X-Auth-Token, Origin, Authorization',
         'X-Requested-With': 'XMLHttpRequest'
       }).then(function (res) {
-        console.log(res);
+        if (res.data) {
+          alert('Pizza succesfully added.');
+          window.location.reload(true);
+        }
       });
     }
   }, {
@@ -66045,7 +66048,7 @@ var AddPizza = /*#__PURE__*/function (_Component) {
         type: "submit"
       }, "Add new pizza")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "add-instructions-container"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Please follow these instructions for adding new pizza:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Enter desired pizza name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Enter desired price for small pizza in \u20AC currency."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Enter desired price for medium pizza in \u20AC currency, only if you wish medium verion of pizza in your offer."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Enter desired price for jumbo pizza in \u20AC currency, only if you wish jumbo verion of pizza in your offer."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Enter all ingredients, and please divide each with a comma sign. Example: \"Cheese,Ketchup,Mushrooms...\""))));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Please follow these instructions for adding new pizza:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Enter desired pizza name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Enter desired price for small pizza in \u20AC currency."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Enter desired price for medium pizza in \u20AC currency, only if you wish medium verion of pizza in your offer."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Enter desired price for jumbo pizza in \u20AC currency, only if you wish jumbo verion of pizza in your offer."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Enter all ingredients, and please divide each with a comma sign. Example: \"Cheese,Ketchup,Mushrooms...\""))));
     }
   }]);
 

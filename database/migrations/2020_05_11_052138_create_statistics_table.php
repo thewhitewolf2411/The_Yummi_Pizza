@@ -15,9 +15,7 @@ class CreateStatisticsTable extends Migration
     {
         Schema::create('statistics', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id');
-            $table->integer('pizza_id');
-            $table->integer('pizza_price');
+            $table->string('product_id');
             $table->timestamps();
         });
     }

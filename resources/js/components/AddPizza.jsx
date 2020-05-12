@@ -33,7 +33,10 @@ export default class AddPizza extends Component{
 
         axios.post('/addpizza', {newPizza}, {'Access-Control-Allow-Origin': '*' , 'Access-Control-Allow-Methods ':  'POST, GET, OPTIONS, PUT, DELETE','Access-Control-Allow-Headers':  'Content-Type, X-Auth-Token, Origin, Authorization','X-Requested-With': 'XMLHttpRequest'})
             .then(res=>{
-                console.log(res);
+                if(res.data){
+                    alert('Pizza succesfully added.');
+                    window.location.reload(true);
+                }
             })
     }
 
@@ -66,7 +69,7 @@ export default class AddPizza extends Component{
                 </form>
 
                 <div className="add-instructions-container">
-                    <p>
+                    <label>
                         Please follow these instructions for adding new pizza:
                         <p>
                             Enter desired pizza name 
@@ -83,7 +86,7 @@ export default class AddPizza extends Component{
                         <p>
                             Enter all ingredients, and please divide each with a comma sign. Example: "Cheese,Ketchup,Mushrooms..."
                         </p>
-                    </p>
+                    </label>
                 </div>
             </div>
         );

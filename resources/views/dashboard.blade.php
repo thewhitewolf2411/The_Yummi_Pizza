@@ -15,6 +15,9 @@
         <!-- Compiled Stylesheet -->
         <link rel="stylesheet" href="/css/app.css">
 
+        <!-- Data charts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
     </head>
     <body class="body-class">
         @if(Auth::user()->is_admin)
@@ -35,7 +38,71 @@
             </div>
 
         </div>
+
+        <div class="statistics-container">
+        
+            <p class="intro-text">Shopping statistics</p>
+            <canvas id="myChart" width="400" height="400"></canvas>
+
+        </div>
         @endif
     </body>
     <script type="text/javascript" src="js/app.js"></script>
+
+    <script>
+
+
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: this.product_names,
+            datasets: [{
+                label: 'Number of purchases',
+                data: this.data,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+        var app = @json($pizzas);
+        this.product_names = [];
+        this.data = [];
+        for(var i=0; i<app.length; i++){
+
+            myChart.data.labels.push(app[i]['product_name']);
+            myChart.data.datasets.forEach((dataset) => {
+                dataset.data.push(app[i]['count']);
+            });
+        }
+
+
+    });
+</script>
 </html>
