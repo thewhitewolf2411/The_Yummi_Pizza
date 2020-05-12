@@ -77,3 +77,19 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+# Yummi pizza
+
+Yummi pizza is a web shop application for ordering pizza online. 
+
+## Built With
+
+* [Laravel](https://laravel.com/ - The laravel framework
+* [ReactJS](https://reactjs.org/) - React framework
+* [ChartJS](https://www.chartjs.org/) - Used to generate statistics chart
+
+
+## Authors
+
+* **Haris Muslić** - *Initial work* - (https://github.com/thewhitewolf2411)
+
