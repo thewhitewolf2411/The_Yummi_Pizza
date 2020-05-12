@@ -9,6 +9,7 @@ export default class PizzaComponent extends Component{
 
         this.state = {
             pizza: [],
+            order: 0,
         }
 
         this.addFunc = this.addFunc.bind(this);
@@ -25,7 +26,10 @@ export default class PizzaComponent extends Component{
     addFunc(id, price, size){
         axios.post('/add-to-cart', {id,price, size})
         .then(res=>{
-            console.log(res);
+            if(res){
+                alert('Item added to cart');
+                this.setState({order: this.state.order + 1});
+            }
         })
     }
     
@@ -38,6 +42,7 @@ export default class PizzaComponent extends Component{
                 </div>
                 <div className="cart-container">
                     <a href='/checkout' target="_blank">Your cart <img src="/images/commerce.svg"></img></a>
+                    <p className="order-number">Items in cart: {this.state.order}</p>
                 </div>
                 {this.state.pizza.map(
                     data =><div className="pizza-object" key={data[1]}>

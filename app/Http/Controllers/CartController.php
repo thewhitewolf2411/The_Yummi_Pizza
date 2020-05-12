@@ -24,7 +24,7 @@ class CartController extends Controller
         $cart->add($product->product_name, $request->price, $request->size, $product->id);
         $request->session()->put('cart', $cart);
         
-        return redirect('/');
+        return true;
     }
 
     public function removeCart(Request $request){

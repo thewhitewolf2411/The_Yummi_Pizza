@@ -66306,7 +66306,8 @@ var PizzaComponent = /*#__PURE__*/function (_Component) {
     _this = _super.call(this); //console.log('here');
 
     _this.state = {
-      pizza: []
+      pizza: [],
+      order: 0
     };
     _this.addFunc = _this.addFunc.bind(_assertThisInitialized(_this));
     return _this;
@@ -66328,18 +66329,26 @@ var PizzaComponent = /*#__PURE__*/function (_Component) {
   }, {
     key: "addFunc",
     value: function addFunc(id, price, size) {
+      var _this3 = this;
+
       axios__WEBPACK_IMPORTED_MODULE_2___default.a.post('/add-to-cart', {
         id: id,
         price: price,
         size: size
       }).then(function (res) {
-        console.log(res);
+        if (res) {
+          alert('Item added to cart');
+
+          _this3.setState({
+            order: _this3.state.order + 1
+          });
+        }
       });
     }
   }, {
     key: "render",
     value: function render() {
-      var _this3 = this;
+      var _this4 = this;
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "card-body"
@@ -66352,7 +66361,9 @@ var PizzaComponent = /*#__PURE__*/function (_Component) {
         target: "_blank"
       }, "Your cart ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "/images/commerce.svg"
-      }))), this.state.pizza.map(function (data) {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "order-number"
+      }, "Items in cart: ", this.state.order)), this.state.pizza.map(function (data) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "pizza-object",
           key: data[1]
@@ -66370,15 +66381,15 @@ var PizzaComponent = /*#__PURE__*/function (_Component) {
           className: "add-container"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           onClick: function onClick() {
-            return _this3.addFunc(data[0], data[5], data[2]);
+            return _this4.addFunc(data[0], data[5], data[2]);
           }
         }, "Add to cart"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           onClick: function onClick() {
-            return _this3.addFunc(data[0], data[6], data[3]);
+            return _this4.addFunc(data[0], data[6], data[3]);
           }
         }, "Add to cart"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           onClick: function onClick() {
-            return _this3.addFunc(data[0], data[7], data[4]);
+            return _this4.addFunc(data[0], data[7], data[4]);
           }
         }, "Add to cart")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "pizza-ingredients-container"
