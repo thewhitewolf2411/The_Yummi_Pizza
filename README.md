@@ -84,7 +84,7 @@ Yummi pizza is a web shop application for ordering pizza online.
 
 ## Built With
 
-* [Laravel](https://laravel.com/ - The laravel framework
+* [Laravel](https://laravel.com/) - The laravel framework
 * [ReactJS](https://reactjs.org/) - React framework
 * [ChartJS](https://www.chartjs.org/) - Used to generate statistics chart
 
